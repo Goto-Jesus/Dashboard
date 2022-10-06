@@ -1,0 +1,16 @@
+.title {
+    margin: 36px 28px 53px;
+    @include m.sFlex;
+
+    h1 {
+        margin-left: 8px;
+        font-weight: bold;
+        font-size: f.$f6;
+
+        small {
+            margin-left: 4px;
+            font-size: f.$f1;
+            color: c.$cSmall;
+        }
+    }
+}

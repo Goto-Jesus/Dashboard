@@ -1,0 +1,80 @@
+.main {
+    table {
+        border-collapse: collapse;
+        padding: 20px;
+        width: 100%;
+        font-size: f.$f3;
+        
+        // width row in table
+        .name {
+            width: 115px+57;
+        }
+        .company {
+            width: 70px+61;
+        }
+
+        .number {
+            width: 104px+52;
+        }
+
+        .email {
+            width: 38px+168;
+        }
+
+        .country {
+            width: 56px+47;
+        }
+        // table elements
+        th {
+            text-align: left;
+            color: #B5B7C0;
+            height: 21px;
+            padding-bottom: 14px;
+
+            &:last-child {
+                div {
+                    float: right;
+                    width: 84px;
+                    text-align: center;
+                }
+            }
+        }
+        td {
+            height: 69px;
+            font-weight: 600;
+        }
+        // status
+        .active,.inactive {
+            float: right;
+            width: 84px;
+            height: 29px;
+            line-height: 29px;
+            text-align: center;
+            border-radius: 4px;
+        }
+        .active {
+            background: #A6E7D8;
+            color: #008767;
+            border: 1px solid #008767;
+        }
+        .inactive {
+            background: #FFC5C5;
+            color: #DF0404;
+            border: 1px solid #DF0404;
+        }
+    }
+    
+    // border-bottom line
+    .thead--border-bottom {
+        border-bottom: 1px solid #EEEEEE;
+        position: relative;
+        top: 36px;
+    }
+    .tbody {
+        margin: 0 40px 0 38px;
+        tr:not(:first-child) {
+            border-bottom: 1px solid #EEEEEE;
+            color: #292D32;
+        }
+    }
+}

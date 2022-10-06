@@ -1,0 +1,150 @@
+@use 'sass:map';
+@use 'mixins'as m;
+@use 'fontSize'as f;
+@use 'color'as c;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    background-color: c.$cMain;
+}
+
+// АДАПТИВ
+// точки разрыва
+$breakpoints:(stretch: 1440px,
+    normal: 1260px,
+    small:1024px,
+    mini:800px,
+    micro:500px);
+
+@mixin max-bp($point) {
+
+    // Адаптация              //берем с карты $breakpoints, название $point
+    @media (max-width: map.get($breakpoints, $point)) {
+        @content; // добавляем правило типа индивидуально
+    }
+}
+
+// body {
+//     &::after {
+//         content: 'full';
+//         text-transform: uppercase;
+//         font-family: sans-serif;
+//         font-weight: bold;
+//         font-size: 200%;
+
+//         position: absolute;
+//         left: 50%;
+//         transform: translateX(-50%);
+
+//         @each $bp in map.keys($breakpoints) // пробегаем по массиву ключей
+
+//             {
+//             @include max-bp($bp) // передаем их в миксин
+
+//                 {
+//                 // тут добавляем правило content;
+//                 content: '#{$bp}';
+//             }
+//         }
+//     }
+// }
+
+.window {
+    // height: 1198px;
+    height: 100vh;
+    width: map.get($breakpoints, 'stretch'); // вычитаем 30px чтоб не было рывка на переходе 65строка
+    margin: auto;
+    display: flex;
+
+    @import '../includes/aside/aside';
+    @import '../includes/main/customers/main';
+
+    //-------------------------------------------------------------------------
+
+    @include max-bp('stretch') {
+        width: auto;
+        // margin: 0 15px;
+    }
+
+    @include max-bp('normal') {
+        aside ul li {
+            width: auto;
+        }
+
+        aside .title img {
+            display: none;
+        }
+
+        main .content {
+            margin: 0 30px;
+        }
+    }
+
+    @include max-bp('small') {
+        flex-direction: column;
+
+        aside {
+            flex-direction: row;
+            flex-wrap: nowrap;
+
+            .title {
+                margin: 10px;
+
+                img {
+                    display: block;
+                }
+
+                h1 {
+                    display: none;
+                }
+            }
+
+            .header {
+                display: flex;
+
+                .list {
+                    ul {
+                        display: flex;
+
+                        li, li.active  {
+                            margin: 10px;
+                            color: c.$cLi;
+                            img {
+                                display: none;
+                            }
+
+                            .icon img {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .footer{
+                .userPanel{
+                    margin: 15px 0;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                }
+            }
+        }
+    }
+
+    @include max-bp('small') {
+        main .content {
+            margin: 0 10px;
+
+            .main .tbody,.header,.footer {
+                margin: 0 20px 0 19px;
+            }
+        }
+    }
+}

@@ -1,0 +1,81 @@
+-
+  let objects = [
+    {
+      name:"Jane Cooper",
+      company:"Microsoft",
+      number:"(225) 555-0118",
+      email:"	jane@microsoft.com",
+      county:"	United States",
+      status:"active"
+    },
+    {
+      name:"Floyd Miles",
+      company:"Yahoo",
+      number:"(205) 555-0100",
+      email:"	floyd@yahoo.com",
+      county:"Kiribati",
+      status:"inactive"
+    },
+    {
+      name:"Ronald Richards",
+      company:"Adobe",
+      number:"(302) 555-0107",
+      email:"	ronald@adobe.com",
+      county:"Israel",
+      status:"inactive"
+    },
+    {
+      name:"Marvin McKinney",
+      company:"Tesla",
+      number:"(252) 555-0126",
+      email:"marvin@tesla.com",
+      county:"Iran",
+      status:"active"
+    },
+    {
+      name:"Jerome Bell",
+      company:"Google",
+      number:"(629) 555-0129",
+      email:"jerome@google.com",
+      county:"Réunion",
+      status:"active"
+    },
+    {
+      name:"Kathryn Murphy",
+      company:"Microsoft",
+      number:"(406) 555-0120",
+      email:"kathryn@microsoft.com",
+      county:"Curaçao",
+      status:"active"
+    },
+    {
+      name:"Jacob Jones",
+      company:"Yahoo",
+      number:"(208) 555-0112",
+      email:"jacob@yahoo.com",
+      county:"Brazil",
+      status:"active"
+    },
+    {
+      name:"Kristin Watson",
+      company:"Facebook",
+      number:"(704) 555-0127",
+      email:"kristin@facebook.com",
+      county:"Åland Islands",
+      status:"inactive"
+    }
+  ];
+
+.main
+  .thead--border-bottom
+  .tbody
+    table
+        tr
+          th.name Customer Name
+          th.company Company
+          th.number Phone Number
+          th.email Email
+          th.country Country
+          th.status 
+            div Status
+        +trItems(objects)

@@ -1,0 +1,11 @@
+aside {
+    background-color: white;
+    filter: drop-shadow(0px 10px 60px rgba(226, 236, 249, .5));
+    @include m.sbFlex;
+    align-items: start;
+    flex-direction: column;
+
+    @import './header/title/_title.scss';
+    @import './header/list/_list.scss';
+    @import './footer/_footer.scss';
+}

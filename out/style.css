@@ -1,0 +1,362 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  background-color: #FAFBFF;
+}
+
+.window {
+  height: 100vh;
+  width: 1440px;
+  margin: auto;
+  display: flex;
+}
+.window aside {
+  background-color: white;
+  filter: drop-shadow(0px 10px 60px rgba(226, 236, 249, 0.5));
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  align-items: start;
+  flex-direction: column;
+}
+.window aside .title {
+  margin: 36px 28px 53px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: start;
+}
+.window aside .title h1 {
+  margin-left: 8px;
+  font-weight: bold;
+  font-size: 26px;
+}
+.window aside .title h1 small {
+  margin-left: 4px;
+  font-size: 10px;
+  color: #838383;
+}
+.window aside ul li {
+  width: 250px;
+  height: 46px;
+  font-size: 14px;
+  border-radius: 8px;
+  margin: 18px 28px;
+  color: #9197B3;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.window aside ul li .icon {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.window aside ul li img {
+  margin: 11px;
+}
+.window aside ul li:hover {
+  box-shadow: 0 0 10px #16C098;
+}
+.window aside ul li.active {
+  background: #5932EA;
+  color: white;
+}
+.window aside ul li.active img {
+  filter: brightness(1000%);
+}
+.window aside ul li.active:hover {
+  box-shadow: 0 0 10px #5932EA;
+}
+.window aside .footer .userPanel {
+  margin: 0 0 76px 28px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: start;
+}
+.window aside .footer .userPanel .avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+}
+.window aside .footer .userPanel .info {
+  margin: 0 12px;
+}
+.window aside .footer .userPanel .info a {
+  font-size: 14px;
+}
+.window aside .footer .userPanel .info p {
+  font-size: 12px;
+  color: #B5B7C0;
+}
+.window main {
+  background-color: #FAFBFF;
+  padding: 41px 0;
+}
+.window main .title {
+  margin: 0 65px 51px 71px;
+  font-weight: 600;
+  font-size: 24px;
+}
+.window main .content {
+  margin: 0 65px 0 71px;
+  background: #FFFFFF;
+  filter: drop-shadow(0px 10px 60px rgba(226, 236, 249, 0.5));
+  border-radius: 30px;
+}
+.window main .content .header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  align-items: start;
+  height: 131px;
+  margin: 0 53px 0 40px;
+  padding-top: 30px;
+}
+.window main .content .header .mainText h2 {
+  font-size: 22px;
+}
+.window main .content .header .mainText p {
+  padding-top: 7px;
+  color: #16C098;
+  font-size: 14px;
+}
+.window main .content .header .search {
+  padding-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.window main .content .header .search button {
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: none;
+  position: relative;
+  left: 32px;
+}
+.window main .content .header .search input {
+  width: 216px;
+  height: 38px;
+  padding: 0 40px;
+  border: none;
+  border-radius: 10px;
+  background: #F9FBFF;
+  font-size: 12px;
+  transition: 1s;
+}
+.window main .content .header .search input:focus {
+  outline: none;
+  box-shadow: 0 0 10px #16C098;
+}
+.window main .content .header .search input::placeholder {
+  color: #B5B7C0;
+}
+.window main .content .main table {
+  border-collapse: collapse;
+  padding: 20px;
+  width: 100%;
+  font-size: 14px;
+}
+.window main .content .main table .name {
+  width: 172px;
+}
+.window main .content .main table .company {
+  width: 131px;
+}
+.window main .content .main table .number {
+  width: 156px;
+}
+.window main .content .main table .email {
+  width: 206px;
+}
+.window main .content .main table .country {
+  width: 103px;
+}
+.window main .content .main table th {
+  text-align: left;
+  color: #B5B7C0;
+  height: 21px;
+  padding-bottom: 14px;
+}
+.window main .content .main table th:last-child div {
+  float: right;
+  width: 84px;
+  text-align: center;
+}
+.window main .content .main table td {
+  height: 69px;
+  font-weight: 600;
+}
+.window main .content .main table .active, .window main .content .main table .inactive {
+  float: right;
+  width: 84px;
+  height: 29px;
+  line-height: 29px;
+  text-align: center;
+  border-radius: 4px;
+}
+.window main .content .main table .active {
+  background: #A6E7D8;
+  color: #008767;
+  border: 1px solid #008767;
+}
+.window main .content .main table .inactive {
+  background: #FFC5C5;
+  color: #DF0404;
+  border: 1px solid #DF0404;
+}
+.window main .content .main .thead--border-bottom {
+  border-bottom: 1px solid #EEEEEE;
+  position: relative;
+  top: 36px;
+}
+.window main .content .main .tbody {
+  margin: 0 40px 0 38px;
+}
+.window main .content .main .tbody tr:not(:first-child) {
+  border-bottom: 1px solid #EEEEEE;
+  color: #292D32;
+}
+.window main .content .footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  align-items: end;
+  margin: 0 40px 0 38px;
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+.window main .content .footer .result {
+  color: #B5B7C0;
+  font-size: 14px;
+  line-height: 21px;
+  padding-bottom: 4px;
+}
+.window main .content .footer .carousel :first-child {
+  margin: 0 6px 0 0;
+}
+.window main .content .footer .carousel :last-child {
+  margin: 0 0 0 6px;
+}
+.window main .content .footer .carousel,
+.window main .content .footer .buttons {
+  display: flex;
+}
+.window main .content .footer .carousel .buttons button,
+.window main .content .footer .buttons .buttons button {
+  margin: 0 6px;
+}
+.window main .content .footer .carousel button,
+.window main .content .footer .buttons button {
+  width: 25px;
+  height: 24px;
+  border: 1px solid #EEEEEE;
+  border-radius: 4px;
+  background: #F5F5F5;
+  color: #404B52;
+  font-size: 12px;
+  font-weight: 600;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.window main .content .footer .carousel button:hover,
+.window main .content .footer .buttons button:hover {
+  box-shadow: 0 0 10px #16C098;
+}
+.window main .content .footer .carousel .points,
+.window main .content .footer .buttons .points {
+  margin: 0 6px;
+  font-size: 12px;
+  text-align: center;
+  color: black;
+}
+.window main .content .footer .carousel .active,
+.window main .content .footer .buttons .active {
+  background: #5932EA;
+  color: white;
+}
+.window main .content .footer .carousel .active:hover,
+.window main .content .footer .buttons .active:hover {
+  box-shadow: 0 0 10px #5932EA;
+}
+@media (max-width: 1440px) {
+  .window {
+    width: auto;
+  }
+}
+@media (max-width: 1260px) {
+  .window aside ul li {
+    width: auto;
+  }
+  .window aside .title img {
+    display: none;
+  }
+  .window main .content {
+    margin: 0 30px;
+  }
+}
+@media (max-width: 1024px) {
+  .window {
+    flex-direction: column;
+  }
+  .window aside {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  .window aside .title {
+    margin: 10px;
+  }
+  .window aside .title img {
+    display: block;
+  }
+  .window aside .title h1 {
+    display: none;
+  }
+  .window aside .header {
+    display: flex;
+  }
+  .window aside .header .list ul {
+    display: flex;
+  }
+  .window aside .header .list ul li, .window aside .header .list ul li.active {
+    margin: 10px;
+    color: #9197B3;
+  }
+  .window aside .header .list ul li img, .window aside .header .list ul li.active img {
+    display: none;
+  }
+  .window aside .header .list ul li .icon img, .window aside .header .list ul li.active .icon img {
+    display: block;
+  }
+  .window aside .footer .userPanel {
+    margin: 15px 0;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+}
+@media (max-width: 1024px) {
+  .window main .content {
+    margin: 0 10px;
+  }
+  .window main .content .main .tbody, .window main .content .header, .window main .content .footer {
+    margin: 0 20px 0 19px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

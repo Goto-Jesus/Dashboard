@@ -1,0 +1,36 @@
+ul {
+    li {
+        width: 250px;
+        height: 46px;
+        font-size: f.$f3;
+        border-radius: 8px;
+        margin: 18px 28px;
+        color: c.$cLi;
+        @include m.sbFlex;
+
+        .icon {
+            @include m.cFlex;
+        }
+
+        img {
+            margin: 11px;
+        }
+
+        &:hover {
+            box-shadow: 0 0 10px c.$cActiveTitle;
+        }
+    }
+
+    li.active {
+        background: c.$cActive;
+        color: white;
+
+        img {
+            filter: brightness(1000%);
+        }
+
+        &:hover {
+            box-shadow: 0 0 10px c.$cActive;
+        }
+    }
+}

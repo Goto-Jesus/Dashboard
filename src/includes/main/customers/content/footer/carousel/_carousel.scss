@@ -1,0 +1,51 @@
+.carousel {
+    :first-child {
+        margin: 0 6px 0 0;
+    }
+    :last-child {
+        margin: 0 0 0 6px;
+    }
+}
+
+.carousel,
+.buttons {
+    display: flex;
+
+    .buttons {
+        button {
+            margin: 0 6px;
+        }
+    }
+
+    button {
+        width: 25px;
+        height: 24px;
+        border: 1px solid #EEEEEE;
+        border-radius: 4px;
+        background: #F5F5F5;
+        color: #404B52;
+        font-size: f.$f2;
+        font-weight: 600;
+        @include m.cFlex;
+
+        &:hover {
+            box-shadow: 0 0 10px #16C098;
+        }
+    }
+
+    .points {
+        margin: 0 6px;
+        font-size: f.$f2;
+        text-align: center;
+        color: black;
+    }
+
+    .active {
+        background: #5932EA;
+        color: white;
+
+        &:hover {
+            box-shadow: 0 0 10px #5932EA;
+        }
+    }
+}

@@ -1,0 +1,6 @@
+main {
+  background-color: #FAFBFF;
+  padding: 41px 0;
+  @import './title/title';
+  @import './content/content';
+}

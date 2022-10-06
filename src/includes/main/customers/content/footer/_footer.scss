@@ -1,0 +1,13 @@
+.footer {
+    @include m.sbFlex;
+    align-items: end;
+    margin: 0 40px 0 38px;
+    padding-top: 30px;
+    padding-bottom: 40px;
+
+    //info
+    @import './info/info';
+    //carousel
+    @import './carousel/carousel';
+    
+}

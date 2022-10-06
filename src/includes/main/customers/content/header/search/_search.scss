@@ -1,0 +1,33 @@
+.search {
+    padding-top: 14px;
+    @include m.cFlex;
+
+    button {
+        width: 24px;
+        height: 24px;
+        border: none;
+        background: none;
+        position: relative;
+        left: 24px+8;
+    }
+
+    input {
+        width: 216px;
+        height: 38px;
+        padding: 0 40px;
+        border: none;
+        border-radius: 10px;
+        background: #F9FBFF;
+   
+        font-size: f.$f2;
+        transition: 1s;
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 0 10px #16C098;
+        }
+        &::placeholder{
+            color: #B5B7C0;
+        }
+    }
+}

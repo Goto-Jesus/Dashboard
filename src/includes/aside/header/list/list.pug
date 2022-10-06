@@ -1,0 +1,19 @@
+-
+  let liItems ={
+    Dashboard:"key-square.svg",
+    Product:"3d-square 1.svg",
+    Customers:"user-square 1.svg",
+    Income:"wallet-money 2.svg",
+    Promote:"discount-shape 1.svg",
+    Help:"message-question 1.svg"
+  }
+
+  let i = 0;
+
+.list
+  ul
+    each icon,name in liItems
+      if((i++)==2)
+        +liItem(icon,name,"active")
+      else
+        +liItem(icon,name)

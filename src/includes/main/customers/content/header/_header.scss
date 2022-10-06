@@ -1,0 +1,10 @@
+.header {
+    @include m.sbFlex;
+    align-items: start;
+    height: 131px;
+    margin: 0 53px 0 40px;
+    padding-top: 30px;
+
+    @import './title/title';
+    @import './search/search';
+}

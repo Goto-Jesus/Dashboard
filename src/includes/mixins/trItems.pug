@@ -1,0 +1,17 @@
+-
+  let firstUpperCase = (str) =>{
+    let arr = str.split('');
+    arr[0]=arr[0].toUpperCase();
+    return arr.join('');}
+
+mixin trItems(...array)
+  each objs in array
+    each obj in objs
+      tr
+        td= obj.name
+        td= obj.company
+        td= obj.number
+        td= obj.email
+        td= obj.county
+        td
+          div(class=obj.status)=firstUpperCase(obj.status)

@@ -1,0 +1,21 @@
+.userPanel {
+    margin: 0 0 76px 28px;
+    @include m.sFlex;
+
+    .avatar {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+    }
+
+    .info {
+        margin: 0 12px;
+        a{
+            font-size: f.$f3;
+        }
+        p {
+            font-size: f.$f2;
+            color: #B5B7C0;
+        }
+    }
+}
